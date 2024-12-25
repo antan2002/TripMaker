@@ -14,7 +14,7 @@ function Profile() {
         const fetchTrips = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/trip');
+                const response = await axios.get('https://tripmaker-enpf.onrender.com/trip');
                 setTrips(response.data);
             } catch (error) {
                 console.error('Error fetching trips:', error);
@@ -49,7 +49,7 @@ function Profile() {
                                 key={trip._id}
                                 trip={trip}
                             // Uncomment if needed
-                            // onClick={() => window.location.href = `http://localhost:8080/trip/${trip._id}`}
+                            // onClick={() => window.location.href = `https://tripmaker-enpf.onrender.com/trip/${trip._id}`}
                             />
                         ))
                     ) : (
